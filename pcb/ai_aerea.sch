@@ -14752,6 +14752,7 @@ This library includes USB, pin headers and sockets in different configurations (
 <pad name="2" x="1.75" y="0" drill="1.016" diameter="2.032"/>
 <pad name="1" x="-1.75" y="0" drill="1.016" diameter="2.032" first="yes"/>
 <text x="-3.81" y="3.81" size="1.27" layer="25" font="vector" ratio="10">&gt;NAME</text>
+<text x="-2.54" y="-5.08" size="1.27" layer="51" font="vector" ratio="10">FRONT</text>
 </package>
 <package name="1X02">
 <wire x1="-2.54" y1="1.27" x2="2.54" y2="1.27" width="0.2032" layer="21"/>
@@ -14984,7 +14985,7 @@ This library includes discrete semiconductor devices such as diodes, FETs, etc.
 <wire x1="-1.016" y1="-2.54" x2="-1.016" y2="2.54" width="0.2032" layer="21" curve="-136.397181"/>
 <wire x1="1.016" y1="2.54" x2="1.778" y2="2.032" width="0.2032" layer="21" curve="-49.398705"/>
 <wire x1="1.778" y1="2.032" x2="1.778" y2="-2.032" width="0.2032" layer="21"/>
-<wire x1="1.016" y1="-2.54" x2="1.778" y2="-2.032" width="0.2032" layer="22" curve="49.398705"/>
+<wire x1="1.016" y1="-2.54" x2="1.778" y2="-2.032" width="0.2032" layer="21" curve="49.398705"/>
 <text x="2.032" y="2.032" size="1.27" layer="25" font="vector" ratio="10">C</text>
 <text x="2.032" y="-0.508" size="1.27" layer="25" font="vector" ratio="10">B</text>
 <text x="2.032" y="-3.048" size="1.27" layer="25" font="vector" ratio="10">E</text>
@@ -14998,7 +14999,7 @@ This library includes discrete semiconductor devices such as diodes, FETs, etc.
 <wire x1="1.016" y1="2.54" x2="1.016" y2="-2.54" width="0.2032" layer="21" curve="-136.397181"/>
 <wire x1="-1.016" y1="-2.54" x2="-1.778" y2="-2.032" width="0.2032" layer="21" curve="-49.398705"/>
 <wire x1="-1.778" y1="-2.032" x2="-1.778" y2="2.032" width="0.2032" layer="21"/>
-<wire x1="-1.016" y1="2.54" x2="-1.778" y2="2.032" width="0.2032" layer="22" curve="49.398705"/>
+<wire x1="-1.016" y1="2.54" x2="-1.778" y2="2.032" width="0.2032" layer="21" curve="49.398705"/>
 <text x="-2.032" y="-2.032" size="1.27" layer="25" font="vector" ratio="10" rot="R180">C</text>
 <text x="-2.032" y="0.508" size="1.27" layer="25" font="vector" ratio="10" rot="R180">B</text>
 <text x="-2.032" y="3.048" size="1.27" layer="25" font="vector" ratio="10" rot="R180">E</text>
@@ -15756,8 +15757,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="C2" library="Ai_Passives" deviceset="CAP" device="025X050" value="4.7uF"/>
 <part name="R1" library="Ai_Passives" deviceset="RES" device="AXIAL-0.4" value="2K"/>
 <part name="GND2" library="Ai_Power" deviceset="GND" device=""/>
-<part name="R2" library="Ai_Sensors" deviceset="LDR" device="-PTH"/>
-<part name="VR1" library="Ai_Passives" deviceset="POT" device="05X05"/>
+<part name="LDR" library="Ai_Sensors" deviceset="LDR" device="-PTH"/>
+<part name="BRT" library="Ai_Passives" deviceset="POT" device="05X05"/>
 <part name="LED1" library="Ai_LED" deviceset="LED" device="5MM"/>
 <part name="LED2" library="Ai_LED" deviceset="LED" device="5MM"/>
 <part name="LED3" library="Ai_LED" deviceset="LED" device="5MM"/>
@@ -15778,7 +15779,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="GND5" library="Ai_Power" deviceset="GND" device=""/>
 <part name="U$1" library="Ai_Power" deviceset="VBAT" device=""/>
 <part name="U$2" library="Ai_Power" deviceset="VBAT" device=""/>
-<part name="U$3" library="Ai_Miscellany" deviceset="AI-LOGO" device="XS"/>
+<part name="U$4" library="Ai_Miscellany" deviceset="AI-LOGO" device="M" value="AI-LOGOM"/>
 <part name="STANDOFF1" library="Ai_Electromechanical" deviceset="STAND-OFF" device=""/>
 <part name="STANDOFF2" library="Ai_Electromechanical" deviceset="STAND-OFF" device=""/>
 <part name="STANDOFF3" library="Ai_Electromechanical" deviceset="STAND-OFF" device=""/>
@@ -15800,8 +15801,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <instance part="C2" gate="G$1" x="111.76" y="123.19"/>
 <instance part="R1" gate="G$1" x="106.68" y="123.19" rot="R90"/>
 <instance part="GND2" gate="GND" x="111.76" y="110.49"/>
-<instance part="R2" gate="G$1" x="76.2" y="55.88" rot="R90"/>
-<instance part="VR1" gate="G$1" x="110.49" y="55.88" rot="R180"/>
+<instance part="LDR" gate="G$1" x="76.2" y="55.88" rot="R90"/>
+<instance part="BRT" gate="G$1" x="110.49" y="55.88" rot="R180"/>
 <instance part="LED1" gate="G$1" x="142.24" y="78.74"/>
 <instance part="LED2" gate="G$1" x="148.59" y="78.74"/>
 <instance part="LED3" gate="G$1" x="154.94" y="78.74"/>
@@ -15822,7 +15823,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <instance part="GND5" gate="GND" x="83.82" y="41.91"/>
 <instance part="U$1" gate="G$1" x="106.68" y="133.35"/>
 <instance part="U$2" gate="G$1" x="76.2" y="90.17"/>
-<instance part="U$3" gate="G$1" x="130.81" y="24.13"/>
+<instance part="U$4" gate="G$1" x="130.81" y="24.13"/>
 <instance part="STANDOFF1" gate="G$1" x="135.89" y="11.43"/>
 <instance part="STANDOFF2" gate="G$1" x="128.27" y="11.43"/>
 <instance part="STANDOFF3" gate="G$1" x="128.27" y="5.08"/>
@@ -15831,11 +15832,15 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <busses>
 </busses>
 <nets>
-<net name="N$1" class="0">
+<net name="VPANEL" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="2"/>
 <pinref part="D1" gate="G$1" pin="A"/>
-<wire x1="62.23" y1="130.81" x2="64.77" y2="130.81" width="0.1524" layer="91"/>
+<wire x1="62.23" y1="130.81" x2="63.5" y2="130.81" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="130.81" x2="64.77" y2="130.81" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="130.81" x2="63.5" y2="133.35" width="0.1524" layer="91"/>
+<junction x="63.5" y="130.81"/>
+<label x="63.5" y="133.35" size="1.27" layer="95" font="vector" ratio="10" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -15877,7 +15882,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <junction x="111.76" y="115.57"/>
 </segment>
 <segment>
-<pinref part="R2" gate="G$1" pin="P$1"/>
+<pinref part="LDR" gate="G$1" pin="P$1"/>
 <wire x1="76.2" y1="48.26" x2="76.2" y2="46.99" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="46.99" x2="83.82" y2="46.99" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="46.99" x2="110.49" y2="46.99" width="0.1524" layer="91"/>
@@ -15886,7 +15891,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <junction x="83.82" y="46.99"/>
 <pinref part="GND5" gate="GND" pin="GND"/>
 <wire x1="83.82" y1="46.99" x2="83.82" y2="44.45" width="0.1524" layer="91"/>
-<pinref part="VR1" gate="G$1" pin="E"/>
+<pinref part="BRT" gate="G$1" pin="E"/>
 <wire x1="110.49" y1="46.99" x2="110.49" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -15917,7 +15922,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <pinref part="Q4" gate="G$1" pin="E"/>
 <wire x1="76.2" y1="87.63" x2="105.41" y2="87.63" width="0.1524" layer="91"/>
 <wire x1="105.41" y1="87.63" x2="105.41" y2="85.09" width="0.1524" layer="91"/>
-<pinref part="VR1" gate="G$1" pin="A"/>
+<pinref part="BRT" gate="G$1" pin="A"/>
 <wire x1="105.41" y1="87.63" x2="110.49" y2="87.63" width="0.1524" layer="91"/>
 <wire x1="110.49" y1="87.63" x2="110.49" y2="60.96" width="0.1524" layer="91"/>
 <junction x="105.41" y="87.63"/>
@@ -15971,7 +15976,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </net>
 <net name="N$10" class="0">
 <segment>
-<pinref part="R2" gate="G$1" pin="P$2"/>
+<pinref part="LDR" gate="G$1" pin="P$2"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="76.2" y1="63.5" x2="76.2" y2="64.77" width="0.1524" layer="91"/>
 <pinref part="Q3" gate="G$1" pin="B"/>
@@ -16020,7 +16025,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </net>
 <net name="-" class="0">
 <segment>
-<pinref part="VR1" gate="G$1" pin="S"/>
+<pinref part="BRT" gate="G$1" pin="S"/>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="105.41" y1="64.77" x2="100.33" y2="64.77" width="0.1524" layer="91"/>
 <wire x1="105.41" y1="64.77" x2="105.41" y2="55.88" width="0.1524" layer="91"/>
