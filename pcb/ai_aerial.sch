@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -15836,10 +15836,6 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <pinref part="Q4" gate="G$1" pin="E"/>
 <wire x1="76.2" y1="87.63" x2="105.41" y2="87.63" width="0.1524" layer="91"/>
 <wire x1="105.41" y1="87.63" x2="105.41" y2="85.09" width="0.1524" layer="91"/>
-<pinref part="BRT" gate="G$1" pin="A"/>
-<wire x1="105.41" y1="87.63" x2="110.49" y2="87.63" width="0.1524" layer="91"/>
-<wire x1="110.49" y1="87.63" x2="110.49" y2="60.96" width="0.1524" layer="91"/>
-<junction x="105.41" y="87.63"/>
 <pinref part="U$2" gate="G$1" pin="VBAT"/>
 <wire x1="76.2" y1="87.63" x2="76.2" y2="90.17" width="0.1524" layer="91"/>
 <junction x="76.2" y="87.63"/>
